@@ -1,0 +1,25 @@
+[package]
+name = "libp2p_learn"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bytes = "1"
+futures = "0.3.1"
+futures-timer = "3.0.2" # Explicit dependency to be used in `wasm-bindgen` feature
+getrandom = "0.2.3" # Explicit dependency to be used in `wasm-bindgen` feature
+instant = "0.1.11" # Explicit dependency to be used in `wasm-bindgen` feature
+lazy_static = "1.2"
+parking_lot = "0.12.0"
+pin-project = "1.0.0"
+rand = "0.7.3" # Explicit dependency to be used in `wasm-bindgen` feature
+smallvec = "1.6.1"
+libp2p = "0.45.0"
+
+async-std = { version = "1.6.2", features = ["attributes"] }
+async-trait = "0.1"
+env_logger = "0.9.0"
+clap = {version = "3.1.6", features = ["derive"]}
+tokio = { version = "1.15", features = ["io-util", "io-std", "macros", "rt", "rt-multi-thread"] }
